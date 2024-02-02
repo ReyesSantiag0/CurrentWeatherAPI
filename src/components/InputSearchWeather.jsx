@@ -3,7 +3,7 @@ export const InputSearchWeather = () => {
     <>
       <div
         className="container "
-        style={{ maxWidth: "500px", marginTop: "10%" }}
+        style={{ maxWidth: "500px", marginTop: "7%" }}
       >
         <div className="input-group input-group-lg">
           <span
