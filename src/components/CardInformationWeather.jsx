@@ -1,7 +1,8 @@
 export const CardInformationWeather = () => {
   return (
     <>
-      <div className="container py-5" style={{ maxWidth: "500px" }}>
+      <div className="container py-3" style={{ maxWidth: "500px" }}>
+        <p>Localización: </p>
         <div className="card text-center">
           <div className="card-body">
             <h5 className="card-title">Nombre de la ciudad</h5>
