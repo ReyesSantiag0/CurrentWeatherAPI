@@ -25,7 +25,7 @@ export const FooterWeather = () => {
           <ul className="nav col-md-4 justify-content-end">
             <li className="nav-item">
               <a href="/" className="nav-link px-2 text-body-secondary">
-                OpenWeather
+                CurrentWeather
               </a>
             </li>
           </ul>

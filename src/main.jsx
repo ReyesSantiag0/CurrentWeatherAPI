@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HomeWeather } from "./pages/HomeWeather";
+import { RoutesWeather } from "./routes/RoutesWeather";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HomeWeather />
+    <BrowserRouter>
+      <RoutesWeather />
+    </BrowserRouter>
   </React.StrictMode>
 );
