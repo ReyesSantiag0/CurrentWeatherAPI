@@ -13,6 +13,7 @@ export const petition = async (city) => {
       state: results.state,
     }));
     console.log(geocoding);
+    return geocoding;
   } catch (error) {
     console.error("Error en la solicitud:", error.message);
   }
