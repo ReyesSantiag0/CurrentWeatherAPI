@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { petition } from "../helpers/apiOpenWeather";
+import { petitionCity } from "../helpers/apiOpenWeather";
 
 export const InputSearchWeather = () => {
   const [inputCity, setInputCity] = useState("");
@@ -9,7 +9,7 @@ export const InputSearchWeather = () => {
   const fetchData = async () => {
     try {
       if (inputCity.length >= 3) {
-        const cities = await petition(inputCity);
+        const cities = await petitionCity(inputCity);
         setCityData(cities);
       }
     } catch (error) {
@@ -104,8 +104,8 @@ export const InputSearchWeather = () => {
               style={{ overflow: "hidden" }}
             >
               {cityData.map((city) => (
-                <option value="1" key={city.lat}>
-                  {city.name}
+                <option value="" key={city.lat}>
+                  {city.name} - {city.state}
                 </option>
               ))}
             </select>

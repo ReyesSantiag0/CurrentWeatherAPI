@@ -1,4 +1,7 @@
+import { petitionWeatherCity } from "../helpers/apiOpenWeather";
+
 export const CardInformationWeather = () => {
+  petitionWeatherCity();
   return (
     <>
       <div className="container py-3" style={{ maxWidth: "500px" }}>
