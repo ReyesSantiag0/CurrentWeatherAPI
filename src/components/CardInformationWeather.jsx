@@ -19,6 +19,8 @@ export const CardInformationWeather = ({ lat, lon }) => {
     fetchData();
   }, [lat, lon]);
 
+  const actualDate = new Date().toLocaleString();
+
   return (
     <>
       <div className="container py-3" style={{ maxWidth: "500px" }}>
@@ -26,8 +28,62 @@ export const CardInformationWeather = ({ lat, lon }) => {
         {cityClimateData.map((city) => (
           <div className="card text-center" key={city.id}>
             <div className="card-body">
-              <h5 className="card-title">{city.name}</h5>
-              <p className="card-text">{city.description}</p>
+              <h5 className="card-title">
+                {city.name} - {city.country}
+              </h5>
+              <p>{actualDate}</p>
+              <hr />
+              <div className="row">
+                <div className="col">
+                  <div className="row">
+                    <h1>
+                      {(city.temp - 273).toFixed(0)}°C
+                      <img
+                        src={`http://openweathermap.org/img/wn/${city.icon}.png`}
+                        alt="Weather Icon"
+                      />
+                    </h1>
+                    <h5>{city.description}</h5>
+                  </div>
+
+                  <hr />
+
+                  <div className="row">
+                    <p>
+                      Sensación térmica: {(city.feels_like - 273).toFixed(0)}°C
+                    </p>
+                  </div>
+
+                  <hr />
+
+                  <div className="row">
+                    <p>Nubosidad: {city.clouds}%</p>
+                  </div>
+                </div>
+
+                <div className="col">
+                  <div className="row">
+                    <p>
+                      Temperatura máxima: {(city.temp_max - 273).toFixed(0)}°C
+                    </p>
+                    <p>
+                      Temperatura mínima: {(city.temp_min - 273).toFixed(0)}°C
+                    </p>
+                  </div>
+
+                  <hr />
+
+                  <div className="row">
+                    <p>Humedad: {city.humidity}%</p>
+                  </div>
+
+                  <hr />
+
+                  <div className="row">
+                    <p>Presión: {city.sea_level}hPa</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
