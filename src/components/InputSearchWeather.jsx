@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { petitionCity } from "../helpers/apiOpenWeather";
+import { CardInformationWeather } from "./CardInformationWeather";
 
 export const InputSearchWeather = () => {
   const [inputCity, setInputCity] = useState("");
   const [cityData, setCityData] = useState([]);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -29,6 +31,13 @@ export const InputSearchWeather = () => {
     fetchData();
   }, [inputCity]);
 
+  const handleSelectChange = (event) => {
+    const selectedIndex = event.target.selectedIndex;
+    const selectedCity = cityData[selectedIndex];
+    if (selectedCity) {
+      setSelectedCity(selectedCity);
+    }
+  };
   return (
     <>
       <div
@@ -102,15 +111,22 @@ export const InputSearchWeather = () => {
               size="3"
               aria-label="Size 3 select example"
               style={{ overflow: "hidden" }}
+              onChange={handleSelectChange}
             >
               {cityData.map((city) => (
-                <option value="" key={city.lat}>
+                <option key={city.lat}>
                   {city.name} - {city.state}
                 </option>
               ))}
             </select>
           )}
         </div>
+        {selectedCity && (
+          <CardInformationWeather
+            lat={selectedCity.lat}
+            lon={selectedCity.lon}
+          />
+        )}
       </div>
     </>
   );

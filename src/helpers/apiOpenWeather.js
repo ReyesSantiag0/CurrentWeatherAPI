@@ -21,9 +21,7 @@ export const petitionCity = async (city) => {
 };
 
 // Current weather data API
-export const petitionWeatherCity = async () => {
-  const latCity = 1.2146013;
-  const lonCity = -77.2782755;
+export const petitionWeatherCity = async (latCity, lonCity) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latCity}&lon=${lonCity}&appid=${appid}`;
   const resp = await fetch(url);
   try {
@@ -33,8 +31,6 @@ export const petitionWeatherCity = async () => {
       main: results.main,
       description: results.description,
       icon: results.icon,
-    }));
-    const cityTemperatureData = {
       temp: data.main.temp,
       feels_like: data.main.feels_like,
       temp_min: data.main.temp_min,
@@ -43,8 +39,11 @@ export const petitionWeatherCity = async () => {
       humidity: data.main.humidity,
       sea_level: data.main.sea_level,
       grnd_level: data.main.grnd_level,
-    };
-    console.log("Clima ", cityClimateData, " ", cityTemperatureData);
+      country: data.sys.country,
+      name: data.name,
+    }));
+    console.log("Clima ", cityClimateData);
+    return cityClimateData;
   } catch (error) {
     console.error("Error en la solicitud:", error.message);
   }
