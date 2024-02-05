@@ -4,8 +4,6 @@ export const HomeWeather = () => {
   return (
     <>
       <InputSearchWeather />
-      {/* <CardInformationWeather /> */}
-      {/* <CardForecastWeather /> */}
     </>
   );
 };
