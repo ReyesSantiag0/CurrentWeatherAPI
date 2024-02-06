@@ -2,15 +2,64 @@ export const CardForecastWeather = () => {
   return (
     <>
       <div className="container" style={{ maxWidth: "500px" }}>
-        <div className="card text-center">
-          <div className="card-body">
-            <p className="card-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
-              obcaecati animi possimus? Iste quaerat, inventore reprehenderit
-              totam beatae a reiciendis ut molestiae libero aliquid ad nostrum
-              quisquam earum, facilis harum?
-            </p>
+        <div
+          id="carouselExampleAutoplaying"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src=".." className="d-block w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src=".." className="d-block w-100" alt=".." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src="" className="d-block w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
           </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </>
