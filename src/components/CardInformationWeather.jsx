@@ -37,7 +37,7 @@ export const CardInformationWeather = ({ lat, lon }) => {
                 <div className="col">
                   <div className="row">
                     <h1>
-                      {(city.temp - 273).toFixed(0)}°C
+                      {city.temp.toFixed(0)}°C
                       <img
                         src={`http://openweathermap.org/img/wn/${city.icon}.png`}
                         alt="Weather Icon"
@@ -49,9 +49,7 @@ export const CardInformationWeather = ({ lat, lon }) => {
                   <hr />
 
                   <div className="row">
-                    <p>
-                      Sensación térmica: {(city.feels_like - 273).toFixed(0)}°C
-                    </p>
+                    <p>Sensación térmica: {city.feels_like.toFixed(0)}°C</p>
                   </div>
 
                   <hr />
@@ -63,12 +61,8 @@ export const CardInformationWeather = ({ lat, lon }) => {
 
                 <div className="col">
                   <div className="row">
-                    <p>
-                      Temperatura máxima: {(city.temp_max - 273).toFixed(0)}°C
-                    </p>
-                    <p>
-                      Temperatura mínima: {(city.temp_min - 273).toFixed(0)}°C
-                    </p>
+                    <p>Temperatura máxima: {city.temp_max.toFixed(0)}°C</p>
+                    <p>Temperatura mínima: {city.temp_min.toFixed(0)}°C</p>
                   </div>
 
                   <hr />
@@ -80,7 +74,7 @@ export const CardInformationWeather = ({ lat, lon }) => {
                   <hr />
 
                   <div className="row">
-                    <p>Presión: {city.sea_level}hPa</p>
+                    <p>Presión: {city.pressure}hPa</p>
                   </div>
                 </div>
               </div>

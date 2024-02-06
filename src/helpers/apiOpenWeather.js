@@ -22,7 +22,7 @@ export const petitionCity = async (city) => {
 
 // Current weather data API
 export const petitionWeatherCity = async (latCity, lonCity) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latCity}&lon=${lonCity}&appid=${appid}&lang=es`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latCity}&lon=${lonCity}&units=metric&appid=${appid}&lang=es`;
   const resp = await fetch(url);
   try {
     const data = await resp.json();
