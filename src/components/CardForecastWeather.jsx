@@ -13,7 +13,10 @@ export const CardForecastWeather = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
-                  Some representative placeholder content for the first slide.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                  quis animi aut qui est cupiditate hic laboriosam consequuntur
+                  cum quam ea ducimus debitis neque, explicabo blanditiis.
+                  Laborum provident molestiae mollitia.
                 </p>
               </div>
             </div>
