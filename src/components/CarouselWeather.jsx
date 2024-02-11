@@ -14,7 +14,10 @@ export const CarouselWeather = () => {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active">
+            <div
+              className="carousel-item active background-image"
+              style={{ backgroundImage: `url(${modalImage})` }}
+            >
               <div className="container text-center">
                 <div className="row align-items-start">
                   <div className="col">
