@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { petitionWeatherCity } from "../helpers/apiOpenWeather";
-import { CardForecastWeather } from "./CardForecastWeather";
+import { CarouselWeather } from "./CarouselWeather";
 
 export const CardInformationWeather = ({ lat, lon }) => {
   const [cityClimateData, setCityClimateData] = useState([]);
@@ -80,7 +80,7 @@ export const CardInformationWeather = ({ lat, lon }) => {
                 </div>
               </div>
               <hr />
-              <CardForecastWeather />
+              <CarouselWeather />
             </div>
           </div>
         ))}
