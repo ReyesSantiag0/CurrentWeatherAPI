@@ -80,7 +80,7 @@ export const CardInformationWeather = ({ lat, lon }) => {
                 </div>
               </div>
               <hr />
-              <CarouselWeather />
+              <CarouselWeather latCity={lat} lonCity={lon} />
             </div>
           </div>
         ))}
