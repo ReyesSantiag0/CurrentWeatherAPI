@@ -43,57 +43,15 @@ export const CarouselWeather = ({ latCity, lonCity }) => {
                 style={{ backgroundImage: `url(${modalImage})` }}
               >
                 <div className="container text-center">
-                  <div className="row align-items-start">
-                    <div className="col">
-                      <div
-                        key={city.dt}
-                        className="card my-3 border-0"
-                        style={{
-                          backgroundColor: "rgba(0, 0, 0, 0.3)",
-                          color: "white",
-                        }}
-                      >
-                        <div className="card-body">
-                          <h5 className="card-title">{city.dt_txt}</h5>
-                          <h1>
-                            {city.temp.toFixed(0)}°C
-                            <img
-                              src={`http://openweathermap.org/img/wn/${city.icon}.png`}
-                              alt="Weather Icon"
-                            />
-                          </h1>
-                          <p className="card-text">{city.description}</p>
-                          <p className="card-text">
-                            {city.name} - {city.country}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div
-                        key={city.dt}
-                        className="card my-3 border-0"
-                        style={{
-                          backgroundColor: "rgba(0, 0, 0, 0.3)",
-                          color: "white",
-                        }}
-                      >
-                        <div className="card-body">
-                          <h5 className="card-title">{city.dt_txt}</h5>
-                          <h1>
-                            {city.temp.toFixed(0)}°C
-                            <img
-                              src={`http://openweathermap.org/img/wn/${city.icon}.png`}
-                              alt="Weather Icon"
-                            />
-                          </h1>
-                          <p className="card-text">{city.description}</p>
-                          <p className="card-text">
-                            {city.name} - {city.country}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                  <div
+                    key={city.dt}
+                    className="card my-3 border-0"
+                    style={{
+                      backgroundColor: "rgba(0, 0, 0, 0.3)",
+                      color: "white",
+                    }}
+                  >
+                    <CardForecastWeather city={city} />
                   </div>
                 </div>
               </div>
