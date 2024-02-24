@@ -38,6 +38,11 @@ export const InputSearchWeather = () => {
       setSelectedCity(selectedCity);
     }
   };
+
+  const uniqueCities = Array.from(
+    new Set(cityData.map((city) => `${city.name}-${city.state}`))
+  );
+
   return (
     <>
       <div
@@ -113,10 +118,8 @@ export const InputSearchWeather = () => {
               style={{ overflow: "hidden" }}
               onChange={handleSelectChange}
             >
-              {cityData.map((city) => (
-                <option key={city.lat}>
-                  {city.name} - {city.state}
-                </option>
+              {uniqueCities.map((city, index) => (
+                <option key={index}>{city}</option>
               ))}
             </select>
           )}

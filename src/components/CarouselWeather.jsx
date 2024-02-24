@@ -36,7 +36,7 @@ export const CarouselWeather = ({ latCity, lonCity }) => {
           <div className="carousel-inner">
             {cityWeatherForecastData.map((city, index) => (
               <div
-                key={city.dt}
+                key={index}
                 className={`carousel-item ${
                   index === 0 ? "active" : ""
                 } background-image`}
@@ -44,7 +44,6 @@ export const CarouselWeather = ({ latCity, lonCity }) => {
               >
                 <div className="container text-center">
                   <div
-                    key={city.dt}
                     className="card my-3 border-0"
                     style={{
                       backgroundColor: "rgba(0, 0, 0, 0.3)",

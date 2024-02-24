@@ -26,8 +26,8 @@ export const CardInformationWeather = ({ lat, lon }) => {
     <>
       <div className="container py-3" style={{ maxWidth: "500px" }}>
         <p>Localización: </p>
-        {cityClimateData.map((city) => (
-          <div className="card text-center" key={city.id}>
+        {cityClimateData.map((city, index) => (
+          <div className="card text-center" key={index}>
             <div className="card-body">
               <h5 className="card-title">
                 {city.name} - {city.country}
