@@ -13,7 +13,6 @@ export const RoutesWeather = () => {
             <HeaderWeather />
             <Routes>
               <Route index element={<HomeWeather />} />
-              <Route path="search/:name" />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
             <FooterWeather />

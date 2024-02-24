@@ -122,10 +122,12 @@ export const InputSearchWeather = () => {
           )}
         </div>
         {selectedCity && (
-          <CardInformationWeather
-            lat={selectedCity.lat}
-            lon={selectedCity.lon}
-          />
+          <>
+            <CardInformationWeather
+              lat={selectedCity.lat}
+              lon={selectedCity.lon}
+            />
+          </>
         )}
       </div>
     </>
