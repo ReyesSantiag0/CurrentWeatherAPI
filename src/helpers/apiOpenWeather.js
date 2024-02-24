@@ -13,7 +13,6 @@ export const petitionCity = async (city) => {
       lon: results.lon,
       state: results.state,
     }));
-    console.log(geocoding);
     return geocoding;
   } catch (error) {
     console.error("Error en la solicitud:", error.message);
@@ -40,7 +39,6 @@ export const petitionWeatherCity = async (latCity, lonCity) => {
       clouds: data.clouds.all,
       pressure: data.main.pressure,
     }));
-    console.log("Clima ", cityClimateData);
     return cityClimateData;
   } catch (error) {
     console.error("Error en la solicitud:", error.message);
@@ -62,7 +60,6 @@ export const petitionForecastCity = async (latCity, lonCity) => {
       icon: results.weather[0].icon,
     }));
 
-    console.log("cityWeatherDataForecast ", cityWeatherDataForecast);
     return cityWeatherDataForecast;
   } catch (error) {
     console.error("Error en la solicitud:", error.message);
