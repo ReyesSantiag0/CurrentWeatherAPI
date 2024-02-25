@@ -1,3 +1,5 @@
+//CONSUMING API https://openweathermap.org/api
+
 // APP ID ACCESS
 const appid = "26a3020b426b79dddcf22bfbc10603a5";
 

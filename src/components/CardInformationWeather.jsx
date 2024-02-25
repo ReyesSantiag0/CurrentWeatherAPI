@@ -25,7 +25,6 @@ export const CardInformationWeather = ({ lat, lon }) => {
   return (
     <>
       <div className="container py-3" style={{ maxWidth: "500px" }}>
-        <p>Localización: </p>
         {cityClimateData.map((city, index) => (
           <div className="card text-center" key={index}>
             <div className="card-body">
