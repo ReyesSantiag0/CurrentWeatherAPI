@@ -72,12 +72,6 @@ export const InputSearchWeather = () => {
             aria-describedby="inputGroup-sizing-lg"
             value={inputCity}
             onChange={onInputChange}
-            style={{
-              borderLeft: "none",
-              borderRight: "none",
-              boxShadow: "none",
-              outline: "none",
-            }}
           />
 
           {inputCity.length > 0 ? (
